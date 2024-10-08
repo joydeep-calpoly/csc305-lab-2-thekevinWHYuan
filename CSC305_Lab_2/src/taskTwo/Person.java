@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class Person {
+class Person {
 
 
     private String name;
@@ -13,7 +13,7 @@ public class Person {
     private ArrayList<Award> awards;
 
     @JsonCreator
-    public Person(@JsonProperty("name") String name, @JsonProperty("knownFor") ArrayList<String> knownFor, @JsonProperty("awards") ArrayList<Award> awards){
+    private Person(@JsonProperty("name") String name, @JsonProperty("knownFor") ArrayList<String> knownFor, @JsonProperty("awards") ArrayList<Award> awards){
         this.name = name;
         this.knownFor = (ArrayList<String>)knownFor.clone();
         this.awards = (ArrayList<Award>) awards.clone();
@@ -33,7 +33,7 @@ public class Person {
         }
 
         @JsonCreator
-        public Award(@JsonProperty("name") String name, @JsonProperty("year") int year){
+        private Award(@JsonProperty("name") String name, @JsonProperty("year") int year){
             this.name = name;
             this.year = year;
         }

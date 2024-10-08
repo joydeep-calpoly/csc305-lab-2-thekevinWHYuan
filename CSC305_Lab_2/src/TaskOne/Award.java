@@ -1,12 +1,12 @@
 package TaskOne;
 
-public class Award {
+class Award {
 
     private String name;
 
     private int year;
 
-    public Award(String name, int year){
+    Award(String name, int year){
         this.name = name;
         this.year = year;
     }

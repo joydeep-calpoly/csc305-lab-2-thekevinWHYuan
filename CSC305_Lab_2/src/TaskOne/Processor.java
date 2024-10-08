@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Processor {
+class Processor {
 
     public static void printResult(ArrayList<Person> people){
         for (Person person : people){
